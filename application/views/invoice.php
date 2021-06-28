@@ -1,115 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Invoice</title>
-    <style>
-    body{
-        font: 1em sans-serif;
-    }
-        table, th, td {
-        border: 1px solid black;
-        border-collapse: collapse;
-        text-align:center;
-        }
-        .text-right{
-            text-align:right;
-        }
-        .text-left{
-            text-align:left;
-        }
-</style>
-</head>
-<body>
-    <table style="width:100%">
-        <tbody >
-        
-            <tr>
-                <td colspan="1"><img src="<?php echo base_url("assets/");?>logo2.jpg" height="150px" alt="" srcset=""></td>
-                <td colspan="5" class="text-left">
-                    <p>BALAJI ENGINEERING SERVICES</p>
-                    <p>REGAL SQUARE , FLAT NO 1203, 12TH FLOOR, BLDG NO.05 ,</p>
-                    <p>SONALE ROAD, NR. SHIVAJI STADIUM </p>
-                    <p>BHADWAD BHIWANDI 421302. </p>
-                    <p>EMAIL ID : balajiengg87@gmail.com </p>
-                    <p>GST NO:  27AACPE6454G1ZV</p>
-                </td>
-                <td colspan="2">tax invoice</td>
-            </tr>
-            <tr>
-            <th colspan="6">
-                    <h6>TAX INVOICE</h6>
-                </th>
-                <th colspan="2">
-                    <h6>ORIGINAL COPY</h6>
-                </th>
-            </tr>
-            <tr>
-                <th colspan="2"> 
-                    <p>Invoice No:-</p>
-                </th>
-                <th colspan="2"> 
-                    <p>Invoice Date:-</p>
-                </th>
-                <th colspan="2"> 
-                    <p>PO No:-</p>
-                </th>
-                <th colspan="2"> 
-                    <p>PO Date:-</p>
-                </th>
-            </tr>
-            <tr>
-                <td colspan="2"> 
-                    <p>BES/2122/INV-10</p>
-                </td>
-                <td colspan="2"> 
-                    <p>22-05-2021</p>
-                </td>
-                <td colspan="2"> 
-                    <p>2201007314</p>
-                </td>
-                <td colspan="2"> 
-                    <p>15-04-2021</p>
-                </td>
-            </tr>
-            <tr>
-                <th colspan="2">
-                    CUSTOMER
-                </th>
-                <th >
-                    CHALLAN NO 	
-                </th>
-                <th >
-                    DATE
-                </th>
-            </tr>
-            <tr>
-                <th colspan="2">
-                "DRT-ANTHEA AROMA CHEMICALS PRIVATE LIMITED (UNIT -II)
-                Plot No. 51A/1 Roha Industrial Area,
-                Village-Roth Budruk, Tal: Roha
-                Dist.: Raigad - 402 116, INDIA"			
-			</th>
-                <th >
-                    CHALLAN NO 	
-                </th>
-                <th >
-                    DATE
-                </th>
-            </tr>
-            <tr>
-                <th>Sr./no</th>
-                <th>HSN / SAC CODE</th>
-                <th>DESCRIPTION</th>
-                <th>No of Description &packages</th>
-                <th>Qty</th>
-                <th>Unit</th>
-                <th>UNIT PRICE IN INR</th>
-                <th>TOTAL PRICE IN INR</th>
-            </tr>
+  <head>
+    <meta charset="utf-8">
+    <title>Example 2</title>
+    <link rel="stylesheet" href="<?php echo base_url("assets/invoice");?>/style.css" media="all" />
+  </head>
+  <body>
+    <header class="clearfix">
+      <div id="logo">
+        <img src="<?php echo base_url("assets");?>/logo2.jpg">
+      </div>
+      <div id="company">
+        <h2 class="name">Company Name</h2>
+        <div>455 Foggy Heights, AZ 85004, US</div>
+        <div>(602) 519-0450</div>
+        <div><a href="mailto:company@example.com">company@example.com</a></div>
+      </div>
+      </div>
+    </header>
+    <main>
+      <div id="details" class="clearfix">
+        <div id="client">
+          <div class="to">INVOICE TO:</div>
+          <h2 class="name">John Doe</h2>
+          <div class="address">796 Silver Harbour, TX 79273, US</div>
+          <div class="email"><a href="mailto:john@example.com">john@example.com</a></div>
+        </div>
+        <div id="invoice">
+          <h1>INVOICE 3-2-1</h1>
+          <div class="date">Date of Invoice: 01/06/2014</div>
+          <div class="date">Due Date: 30/06/2014</div>
+        </div>
+      </div>
+      <table border="0" cellspacing="0" cellpadding="0">
+        <thead>
+          <tr>
+            <th class="no">#</th>
+            <th class="desc">DESCRIPTION</th>
+            <th class="unit">UNIT PRICE</th>
+            <th class="qty">QUANTITY</th>
+            <th class="total">TOTAL</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="no">01</td>
+            <td class="desc"><h3>Website Design</h3>Creating a recognizable design solution based on the company's existing visual identity</td>
+            <td class="unit">$40.00</td>
+            <td class="qty">30</td>
+            <td class="total">$1,200.00</td>
+          </tr>
+          <tr>
+            <td class="no">02</td>
+            <td class="desc"><h3>Website Development</h3>Developing a Content Management System-based Website</td>
+            <td class="unit">$40.00</td>
+            <td class="qty">80</td>
+            <td class="total">$3,200.00</td>
+          </tr>
+          <tr>
+            <td class="no">03</td>
+            <td class="desc"><h3>Search Engines Optimization</h3>Optimize the site for search engines (SEO)</td>
+            <td class="unit">$40.00</td>
+            <td class="qty">20</td>
+            <td class="total">$800.00</td>
+          </tr>
         </tbody>
-    </table>
-</body>
+        <tfoot>
+          <tr>
+            <td colspan="2"></td>
+            <td colspan="2">SUBTOTAL</td>
+            <td>$5,200.00</td>
+          </tr>
+          <tr>
+            <td colspan="2"></td>
+            <td colspan="2">TAX 25%</td>
+            <td>$1,300.00</td>
+          </tr>
+          <tr>
+            <td colspan="2"></td>
+            <td colspan="2">GRAND TOTAL</td>
+            <td>$6,500.00</td>
+          </tr>
+        </tfoot>
+      </table>
+      <div id="thanks">Thank you!</div>
+      <div id="notices">
+        <div>NOTICE:</div>
+        <div class="notice">A finance charge of 1.5% will be made on unpaid balances after 30 days.</div>
+      </div>
+    </main>
+    <footer>
+      Invoice was created on a computer and is valid without the signature and seal.
+    </footer>
+  </body>
 </html>

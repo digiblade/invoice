@@ -17,4 +17,10 @@ class Front extends CI_Controller{
         $this->load->view("Customer/addCustomer");
         $this->load->view("footer");
     }
+    public function manageCustomer(){
+        $data = $this->gm->getRoute("customer","manage");
+        $this->load->view("header",$data);
+        $this->load->view("Customer/manageCustomer");
+        $this->load->view("footer");
+    }
 }

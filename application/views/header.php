@@ -25,6 +25,10 @@
   <link rel="stylesheet" href="<?php echo base_url("assets/");?>plugins/daterangepicker/daterangepicker.css">
   <!-- summernote -->
   <link rel="stylesheet" href="<?php echo base_url("assets/");?>plugins/summernote/summernote-bs4.min.css">
+   <!-- DataTables -->
+  <link rel="stylesheet" href="<?php echo base_url("assets/");?>plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+  <link rel="stylesheet" href="<?php echo base_url("assets/");?>plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
+  <link rel="stylesheet" href="<?php echo base_url("assets/");?>plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
@@ -127,10 +131,19 @@
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
           <li class="nav-item">
-            <a href="<?php echo base_url("assets/");?>pages/widgets.html" class="nav-link <?php if($main=='dashboard'){echo 'active';}?>">
+            <a href="<?php echo base_url("front/");?>" class="nav-link <?php if($main=='dashboard'){echo 'active';}?>">
               <i class="nav-icon fas fa-th"></i>
               <p>
                 Dashboard
+                
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="<?php echo base_url("invoice/");?>" class="nav-link <?php if($main=='invoice'){echo 'active';}?>">
+              <i class="nav-icon fas fa-th"></i>
+              <p>
+                View Invoice
                 
               </p>
             </a>
@@ -152,7 +165,7 @@
                 </a>
               </li>
               <li class="nav-item ">
-                <a href="<?php echo base_url("front/");?>" class="nav-link <?php if($main=='customer'&&$sub=="manage"){echo 'active';}?>">
+                <a href="<?php echo base_url("front/manageCustomer");?>" class="nav-link <?php if($main=='customer'&&$sub=="manage"){echo 'active';}?>">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Manage Customer</p>
                 </a>
